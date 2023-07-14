@@ -1,0 +1,181 @@
+10:49:39 **** Rebuild of configuration Debug for project LFIO_DS ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:12:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+..\main.c: In function 'main':
+..\main.c:18:23: warning: passing argument 2 of 'LIFO_init' makes integer from pointer without a cast [-Wint-conversion]
+ LIFO_init(&UART_BUFF, Buff,5);
+                       ^~~~
+In file included from ..\main.c:8:0:
+..\lifo.h:34:13: note: expected 'unsigned int' but argument is of type 'unsigned int *'
+ LIFO_Status LIFO_init(LIFO_TYPE *lbuf,unsigned int Buff,unsigned int length);
+             ^~~~~~~~~
+..\main.c:22:22: warning: passing argument 2 of 'LIFO_init' makes integer from pointer without a cast [-Wint-conversion]
+ LIFO_init(&I2C_BUFF, Buff2,5);
+                      ^~~~~
+In file included from ..\main.c:8:0:
+..\lifo.h:34:13: note: expected 'unsigned int' but argument is of type 'unsigned int *'
+ LIFO_Status LIFO_init(LIFO_TYPE *lbuf,unsigned int Buff,unsigned int length);
+             ^~~~~~~~~
+..\main.c:34:32: error: invalid type argument of unary '*' (have 'int')
+  if (LIFO_get_item(&UART_BUFF, *temp)==LIFO_NO_ERROR)
+                                ^~~~~
+10:50:20 **** Incremental Build of configuration Debug for project LFIO_DS ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o lifo.o "..\\lifo.c" 
+..\lifo.c:10:1: error: unknown type name 'LIFO_Status'
+ LIFO_Status LIFO_add_item(LIFO_TYPE* lbuf,unsigned int item)
+ ^~~~~~~~~~~
+..\lifo.c:10:27: error: unknown type name 'LIFO_TYPE'
+ LIFO_Status LIFO_add_item(LIFO_TYPE* lbuf,unsigned int item)
+                           ^~~~~~~~~
+..\lifo.c:28:1: error: unknown type name 'LIFO_Status'
+ LIFO_Status LIFO_get_item(LIFO_TYPE *lbuf,unsigned int *item)
+ ^~~~~~~~~~~
+..\lifo.c:28:27: error: unknown type name 'LIFO_TYPE'
+ LIFO_Status LIFO_get_item(LIFO_TYPE *lbuf,unsigned int *item)
+                           ^~~~~~~~~
+..\lifo.c:52:1: error: unknown type name 'LIFO_Status'
+ LIFO_Status LIFO_init(LIFO_TYPE *lbuf,unsigned int* Buff,unsigned int length)
+ ^~~~~~~~~~~
+..\lifo.c:52:23: error: unknown type name 'LIFO_TYPE'
+ LIFO_Status LIFO_init(LIFO_TYPE *lbuf,unsigned int* Buff,unsigned int length)
+                       ^~~~~~~~~
+10:52:25 **** Incremental Build of configuration Debug for project LFIO_DS ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:12:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+..\main.c: In function 'main':
+..\main.c:18:23: warning: passing argument 2 of 'LIFO_init' makes integer from pointer without a cast [-Wint-conversion]
+ LIFO_init(&UART_BUFF, Buff,5);
+                       ^~~~
+In file included from ..\main.c:8:0:
+..\lifo.h:34:13: note: expected 'unsigned int' but argument is of type 'unsigned int *'
+ LIFO_Status LIFO_init(LIFO_TYPE *lbuf,unsigned int Buff,unsigned int length);
+             ^~~~~~~~~
+..\main.c:22:22: warning: passing argument 2 of 'LIFO_init' makes integer from pointer without a cast [-Wint-conversion]
+ LIFO_init(&I2C_BUFF, Buff2,5);
+                      ^~~~~
+In file included from ..\main.c:8:0:
+..\lifo.h:34:13: note: expected 'unsigned int' but argument is of type 'unsigned int *'
+ LIFO_Status LIFO_init(LIFO_TYPE *lbuf,unsigned int Buff,unsigned int length);
+             ^~~~~~~~~
+..\main.c:34:32: warning: pointer targets in passing argument 2 of 'LIFO_get_item' differ in signedness [-Wpointer-sign]
+  if (LIFO_get_item(&UART_BUFF, &temp)==LIFO_NO_ERROR)
+                                ^
+In file included from ..\main.c:8:0:
+..\lifo.h:33:13: note: expected 'unsigned int *' but argument is of type 'int *'
+ LIFO_Status LIFO_get_item(LIFO_TYPE *lbuf,unsigned int *item);
+             ^~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o lifo.o "..\\lifo.c" 
+..\lifo.c:10:1: error: unknown type name 'LIFO_Status'
+ LIFO_Status LIFO_add_item(LIFO_TYPE * lbuf,unsigned int item)
+ ^~~~~~~~~~~
+..\lifo.c:10:27: error: unknown type name 'LIFO_TYPE'
+ LIFO_Status LIFO_add_item(LIFO_TYPE * lbuf,unsigned int item)
+                           ^~~~~~~~~
+..\lifo.c:28:1: error: unknown type name 'LIFO_Status'
+ LIFO_Status LIFO_get_item(LIFO_TYPE *lbuf,unsigned int *item)
+ ^~~~~~~~~~~
+..\lifo.c:28:27: error: unknown type name 'LIFO_TYPE'
+ LIFO_Status LIFO_get_item(LIFO_TYPE *lbuf,unsigned int *item)
+                           ^~~~~~~~~
+..\lifo.c:52:1: error: unknown type name 'LIFO_Status'
+ LIFO_Status LIFO_init(LIFO_TYPE *lbuf,unsigned int* Buff,unsigned int length)
+ ^~~~~~~~~~~
+..\lifo.c:52:23: error: unknown type name 'LIFO_TYPE'
+ LIFO_Status LIFO_init(LIFO_TYPE *lbuf,unsigned int* Buff,unsigned int length)
+                       ^~~~~~~~~
+10:53:37 **** Incremental Build of configuration Debug for project LFIO_DS ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o lifo.o "..\\lifo.c" 
+..\lifo.c:52:13: error: conflicting types for 'LIFO_init'
+ LIFO_Status LIFO_init(LIFO_TYPE *lbuf,unsigned int* Buff,unsigned int length)
+             ^~~~~~~~~
+In file included from ..\lifo.c:9:0:
+..\lifo.h:34:13: note: previous declaration of 'LIFO_init' was here
+ LIFO_Status LIFO_init(LIFO_TYPE *lbuf,unsigned int Buff,unsigned int length);
+             ^~~~~~~~~
+10:54:46 **** Incremental Build of configuration Debug for project LFIO_DS ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o lifo.o "..\\lifo.c" 
+..\lifo.c:51:13: error: conflicting types for 'LIFO_init'
+ LIFO_Status LIFO_init(LIFO_TYPE *lbuf,unsigned int* Buff,unsigned int length)
+             ^~~~~~~~~
+In file included from ..\lifo.c:8:0:
+..\lifo.h:34:13: note: previous declaration of 'LIFO_init' was here
+ LIFO_Status LIFO_init(LIFO_TYPE *lbuf,unsigned int Buff,unsigned int length);
+             ^~~~~~~~~
+10:55:22 **** Incremental Build of configuration Debug for project LFIO_DS ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:12:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+..\main.c: In function 'main':
+..\main.c:18:23: warning: passing argument 2 of 'LIFO_init' makes integer from pointer without a cast [-Wint-conversion]
+ LIFO_init(&UART_BUFF, Buff,5);
+                       ^~~~
+In file included from ..\main.c:8:0:
+..\lifo.h:32:13: note: expected 'unsigned int' but argument is of type 'unsigned int *'
+ LIFO_Status LIFO_init(LIFO_TYPE *lbuf,unsigned int Buff,unsigned int length);
+             ^~~~~~~~~
+..\main.c:22:22: warning: passing argument 2 of 'LIFO_init' makes integer from pointer without a cast [-Wint-conversion]
+ LIFO_init(&I2C_BUFF, Buff2,5);
+                      ^~~~~
+In file included from ..\main.c:8:0:
+..\lifo.h:32:13: note: expected 'unsigned int' but argument is of type 'unsigned int *'
+ LIFO_Status LIFO_init(LIFO_TYPE *lbuf,unsigned int Buff,unsigned int length);
+             ^~~~~~~~~
+..\main.c:34:32: warning: pointer targets in passing argument 2 of 'LIFO_get_item' differ in signedness [-Wpointer-sign]
+  if (LIFO_get_item(&UART_BUFF, &temp)==LIFO_NO_ERROR)
+                                ^
+In file included from ..\main.c:8:0:
+..\lifo.h:34:13: note: expected 'unsigned int *' but argument is of type 'int *'
+ LIFO_Status LIFO_get_item(LIFO_TYPE *lbuf,unsigned int *item);
+             ^~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o lifo.o "..\\lifo.c" 
+..\lifo.c:51:13: error: conflicting types for 'LIFO_init'
+ LIFO_Status LIFO_init(LIFO_TYPE *lbuf,unsigned int* Buff,unsigned int length)
+             ^~~~~~~~~
+In file included from ..\lifo.c:8:0:
+..\lifo.h:32:13: note: previous declaration of 'LIFO_init' was here
+ LIFO_Status LIFO_init(LIFO_TYPE *lbuf,unsigned int Buff,unsigned int length);
+             ^~~~~~~~~
+10:56:37 **** Incremental Build of configuration Debug for project LFIO_DS ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:12:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+..\main.c: In function 'main':
+..\main.c:34:32: warning: pointer targets in passing argument 2 of 'LIFO_get_item' differ in signedness [-Wpointer-sign]
+  if (LIFO_get_item(&UART_BUFF, &temp)==LIFO_NO_ERROR)
+                                ^
+In file included from ..\main.c:8:0:
+..\lifo.h:34:13: note: expected 'unsigned int *' but argument is of type 'int *'
+ LIFO_Status LIFO_get_item(LIFO_TYPE *lbuf,unsigned int *item);
+             ^~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o lifo.o "..\\lifo.c" 
+gcc -o LFIO_DS.exe lifo.o main.o 
+Info: Nothing to build for LFIO_DS
+23:47:44 **** Rebuild of configuration Debug for project LFIO_DS ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:12:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+..\main.c: In function 'main':
+..\main.c:34:32: warning: pointer targets in passing argument 2 of 'LIFO_get_item' differ in signedness [-Wpointer-sign]
+  if (LIFO_get_item(&UART_BUFF, &temp)==LIFO_NO_ERROR)
+                                ^
+In file included from ..\main.c:8:0:
+..\lifo.h:34:13: note: expected 'unsigned int *' but argument is of type 'int *'
+ LIFO_Status LIFO_get_item(LIFO_TYPE *lbuf,unsigned int *item);
+             ^~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o lifo.o "..\\lifo.c" 
+gcc -o LFIO_DS.exe lifo.o main.o 

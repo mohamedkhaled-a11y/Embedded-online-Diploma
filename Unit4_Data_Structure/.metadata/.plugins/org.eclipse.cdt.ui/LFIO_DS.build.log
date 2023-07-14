@@ -1,0 +1,19 @@
+23:47:44 **** Rebuild of configuration Debug for project LFIO_DS ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:12:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+..\main.c: In function 'main':
+..\main.c:34:32: warning: pointer targets in passing argument 2 of 'LIFO_get_item' differ in signedness [-Wpointer-sign]
+  if (LIFO_get_item(&UART_BUFF, &temp)==LIFO_NO_ERROR)
+                                ^
+In file included from ..\main.c:8:0:
+..\lifo.h:34:13: note: expected 'unsigned int *' but argument is of type 'int *'
+ LIFO_Status LIFO_get_item(LIFO_TYPE *lbuf,unsigned int *item);
+             ^~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o lifo.o "..\\lifo.c" 
+gcc -o LFIO_DS.exe lifo.o main.o 
+
+23:47:45 Build Finished. 0 errors, 2 warnings. (took 515ms)
+
