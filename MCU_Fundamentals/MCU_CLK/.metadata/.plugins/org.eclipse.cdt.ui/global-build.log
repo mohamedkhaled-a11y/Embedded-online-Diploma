@@ -1,0 +1,426 @@
+15:41:28 **** Build of configuration Debug for project clk_lab ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+../Src/main.c:24:9: error: unknown type name 'vuint32_t'
+         vuint32_t   all_fileds;
+         ^~~~~~~~~
+../Src/main.c:26:10: error: unknown type name 'vuint32_t'
+          vuint32_t   reserved:13;
+          ^~~~~~~~~
+../Src/main.c:27:10: error: unknown type name 'vuint32_t'
+          vuint32_t  p_13:1;
+          ^~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:13:40: error: unknown type name 'uint32_t'
+ #define RCC_APB2ENR         *(volatile uint32_t *)(RCC_BASE+0x18)
+                                        ^
+../Src/main.c:38:2: note: in expansion of macro 'RCC_APB2ENR'
+  RCC_APB2ENR |=RCC_IOPAEN;
+  ^~~~~~~~~~~
+../Src/main.c:16:40: error: unknown type name 'uint32_t'
+ #define RCC_CR              *(volatile uint32_t *)(RCC_BASE+0x00)
+                                        ^
+../Src/main.c:40:2: note: in expansion of macro 'RCC_CR'
+  RCC_CR |=(1<<0);
+  ^~~~~~
+../Src/main.c:17:40: error: unknown type name 'uint32_t'
+ #define RCC_CFGR            *(volatile uint32_t *)(RCC_BASE+0x04)
+                                        ^
+../Src/main.c:41:2: note: in expansion of macro 'RCC_CFGR'
+  RCC_CFGR |=(0<<0 | 0<<1);
+  ^~~~~~~~
+../Src/main.c:17:40: error: unknown type name 'uint32_t'
+ #define RCC_CFGR            *(volatile uint32_t *)(RCC_BASE+0x04)
+                                        ^
+../Src/main.c:42:2: note: in expansion of macro 'RCC_CFGR'
+  RCC_CFGR |=(0b101 <<11);
+  ^~~~~~~~
+../Src/main.c:43:2: error: 'RCC' undeclared (first use in this function)
+  RCC|=(0b100 <<8);
+  ^~~
+../Src/main.c:43:2: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:14:40: error: unknown type name 'uint32_t'
+ #define PA_CRH              *(volatile uint32_t *)(PORTA_BASE+0x04)
+                                        ^
+../Src/main.c:49:2: note: in expansion of macro 'PA_CRH'
+  PA_CRH &=0xff0fffff;
+  ^~~~~~
+../Src/main.c:14:40: error: unknown type name 'uint32_t'
+ #define PA_CRH              *(volatile uint32_t *)(PORTA_BASE+0x04)
+                                        ^
+../Src/main.c:50:2: note: in expansion of macro 'PA_CRH'
+  PA_CRH |=0x00200000;
+  ^~~~~~
+../Src/main.c:58:7: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+       for (int i=0;i<5000;i++);
+       ^~~
+../Src/main.c:60:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+   R_ODR->pin.p_13=0;
+   ^~~~~
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:42:22 **** Incremental Build of configuration Debug for project clk_lab ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c:28:9: error: unknown type name 'vuint32_t'
+         vuint32_t   all_fileds;
+         ^~~~~~~~~
+../Src/main.c:30:10: error: unknown type name 'vuint32_t'
+          vuint32_t   reserved:13;
+          ^~~~~~~~~
+../Src/main.c:31:10: error: unknown type name 'vuint32_t'
+          vuint32_t  p_13:1;
+          ^~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:17:40: error: unknown type name 'uint32_t'
+ #define RCC_APB2ENR         *(volatile uint32_t *)(RCC_BASE+0x18)
+                                        ^
+../Src/main.c:42:2: note: in expansion of macro 'RCC_APB2ENR'
+  RCC_APB2ENR |=RCC_IOPAEN;
+  ^~~~~~~~~~~
+../Src/main.c:20:40: error: unknown type name 'uint32_t'
+ #define RCC_CR              *(volatile uint32_t *)(RCC_BASE+0x00)
+                                        ^
+../Src/main.c:44:2: note: in expansion of macro 'RCC_CR'
+  RCC_CR |=(1<<0);
+  ^~~~~~
+../Src/main.c:21:40: error: unknown type name 'uint32_t'
+ #define RCC_CFGR            *(volatile uint32_t *)(RCC_BASE+0x04)
+                                        ^
+../Src/main.c:45:2: note: in expansion of macro 'RCC_CFGR'
+  RCC_CFGR |=(0<<0 | 0<<1);
+  ^~~~~~~~
+../Src/main.c:21:40: error: unknown type name 'uint32_t'
+ #define RCC_CFGR            *(volatile uint32_t *)(RCC_BASE+0x04)
+                                        ^
+../Src/main.c:46:2: note: in expansion of macro 'RCC_CFGR'
+  RCC_CFGR |=(0b101 <<11);
+  ^~~~~~~~
+../Src/main.c:47:2: error: 'RCC' undeclared (first use in this function)
+  RCC|=(0b100 <<8);
+  ^~~
+../Src/main.c:47:2: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:18:40: error: unknown type name 'uint32_t'
+ #define PA_CRH              *(volatile uint32_t *)(PORTA_BASE+0x04)
+                                        ^
+../Src/main.c:53:2: note: in expansion of macro 'PA_CRH'
+  PA_CRH &=0xff0fffff;
+  ^~~~~~
+../Src/main.c:18:40: error: unknown type name 'uint32_t'
+ #define PA_CRH              *(volatile uint32_t *)(PORTA_BASE+0x04)
+                                        ^
+../Src/main.c:54:2: note: in expansion of macro 'PA_CRH'
+  PA_CRH |=0x00200000;
+  ^~~~~~
+../Src/main.c:62:7: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+       for (int i=0;i<5000;i++);
+       ^~~
+../Src/main.c:64:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+   R_ODR->pin.p_13=0;
+   ^~~~~
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:42:37 **** Incremental Build of configuration Debug for project clk_lab ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c:28:9: error: unknown type name 'vuint32_t'
+         vuint32_t   all_fileds;
+         ^~~~~~~~~
+../Src/main.c:30:10: error: unknown type name 'vuint32_t'
+          vuint32_t   reserved:13;
+          ^~~~~~~~~
+../Src/main.c:31:10: error: unknown type name 'vuint32_t'
+          vuint32_t  p_13:1;
+          ^~~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:17:40: error: unknown type name 'uint32_t'
+ #define RCC_APB2ENR         *(volatile uint32_t *)(RCC_BASE+0x18)
+                                        ^
+../Src/main.c:42:2: note: in expansion of macro 'RCC_APB2ENR'
+  RCC_APB2ENR |=RCC_IOPAEN;
+  ^~~~~~~~~~~
+../Src/main.c:20:40: error: unknown type name 'uint32_t'
+ #define RCC_CR              *(volatile uint32_t *)(RCC_BASE+0x00)
+                                        ^
+../Src/main.c:44:2: note: in expansion of macro 'RCC_CR'
+  RCC_CR |=(1<<0);
+  ^~~~~~
+../Src/main.c:21:40: error: unknown type name 'uint32_t'
+ #define RCC_CFGR            *(volatile uint32_t *)(RCC_BASE+0x04)
+                                        ^
+../Src/main.c:45:2: note: in expansion of macro 'RCC_CFGR'
+  RCC_CFGR |=(0<<0 | 0<<1);
+  ^~~~~~~~
+../Src/main.c:21:40: error: unknown type name 'uint32_t'
+ #define RCC_CFGR            *(volatile uint32_t *)(RCC_BASE+0x04)
+                                        ^
+../Src/main.c:46:2: note: in expansion of macro 'RCC_CFGR'
+  RCC_CFGR |=(0b101 <<11);
+  ^~~~~~~~
+../Src/main.c:47:2: error: 'RCC' undeclared (first use in this function)
+  RCC|=(0b100 <<8);
+  ^~~
+../Src/main.c:47:2: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:18:40: error: unknown type name 'uint32_t'
+ #define PA_CRH              *(volatile uint32_t *)(PORTA_BASE+0x04)
+                                        ^
+../Src/main.c:53:2: note: in expansion of macro 'PA_CRH'
+  PA_CRH &=0xff0fffff;
+  ^~~~~~
+../Src/main.c:18:40: error: unknown type name 'uint32_t'
+ #define PA_CRH              *(volatile uint32_t *)(PORTA_BASE+0x04)
+                                        ^
+../Src/main.c:54:2: note: in expansion of macro 'PA_CRH'
+  PA_CRH |=0x00200000;
+  ^~~~~~
+../Src/main.c:62:7: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+       for (int i=0;i<5000;i++);
+       ^~~
+../Src/main.c:64:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+   R_ODR->pin.p_13=0;
+   ^~~~~
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:43:18 **** Incremental Build of configuration Debug for project clk_lab ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c:28:18: error: unknown type name 'uint32_t'
+         volatile uint32_t   all_fileds;
+                  ^~~~~~~~
+../Src/main.c:30:19: error: unknown type name 'uint32_t'
+          volatile uint32_t   reserved:13;
+                   ^~~~~~~~
+../Src/main.c:31:19: error: unknown type name 'uint32_t'
+          volatile uint32_t  p_13:1;
+                   ^~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:17:40: error: unknown type name 'uint32_t'
+ #define RCC_APB2ENR         *(volatile uint32_t *)(RCC_BASE+0x18)
+                                        ^
+../Src/main.c:42:2: note: in expansion of macro 'RCC_APB2ENR'
+  RCC_APB2ENR |=RCC_IOPAEN;
+  ^~~~~~~~~~~
+../Src/main.c:20:40: error: unknown type name 'uint32_t'
+ #define RCC_CR              *(volatile uint32_t *)(RCC_BASE+0x00)
+                                        ^
+../Src/main.c:44:2: note: in expansion of macro 'RCC_CR'
+  RCC_CR |=(1<<0);
+  ^~~~~~
+../Src/main.c:21:40: error: unknown type name 'uint32_t'
+ #define RCC_CFGR            *(volatile uint32_t *)(RCC_BASE+0x04)
+                                        ^
+../Src/main.c:45:2: note: in expansion of macro 'RCC_CFGR'
+  RCC_CFGR |=(0<<0 | 0<<1);
+  ^~~~~~~~
+../Src/main.c:21:40: error: unknown type name 'uint32_t'
+ #define RCC_CFGR            *(volatile uint32_t *)(RCC_BASE+0x04)
+                                        ^
+../Src/main.c:46:2: note: in expansion of macro 'RCC_CFGR'
+  RCC_CFGR |=(0b101 <<11);
+  ^~~~~~~~
+../Src/main.c:47:2: error: 'RCC' undeclared (first use in this function)
+  RCC|=(0b100 <<8);
+  ^~~
+../Src/main.c:47:2: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:18:40: error: unknown type name 'uint32_t'
+ #define PA_CRH              *(volatile uint32_t *)(PORTA_BASE+0x04)
+                                        ^
+../Src/main.c:53:2: note: in expansion of macro 'PA_CRH'
+  PA_CRH &=0xff0fffff;
+  ^~~~~~
+../Src/main.c:18:40: error: unknown type name 'uint32_t'
+ #define PA_CRH              *(volatile uint32_t *)(PORTA_BASE+0x04)
+                                        ^
+../Src/main.c:54:2: note: in expansion of macro 'PA_CRH'
+  PA_CRH |=0x00200000;
+  ^~~~~~
+../Src/main.c:62:7: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+       for (int i=0;i<5000;i++);
+       ^~~
+../Src/main.c:64:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+   R_ODR->pin.p_13=0;
+   ^~~~~
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:43:21 **** Incremental Build of configuration Debug for project clk_lab ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c:28:18: error: unknown type name 'uint32_t'
+         volatile uint32_t   all_fileds;
+                  ^~~~~~~~
+../Src/main.c:30:19: error: unknown type name 'uint32_t'
+          volatile uint32_t   reserved:13;
+                   ^~~~~~~~
+../Src/main.c:31:19: error: unknown type name 'uint32_t'
+          volatile uint32_t  p_13:1;
+                   ^~~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:17:40: error: unknown type name 'uint32_t'
+ #define RCC_APB2ENR         *(volatile uint32_t *)(RCC_BASE+0x18)
+                                        ^
+../Src/main.c:42:2: note: in expansion of macro 'RCC_APB2ENR'
+  RCC_APB2ENR |=RCC_IOPAEN;
+  ^~~~~~~~~~~
+../Src/main.c:20:40: error: unknown type name 'uint32_t'
+ #define RCC_CR              *(volatile uint32_t *)(RCC_BASE+0x00)
+                                        ^
+../Src/main.c:44:2: note: in expansion of macro 'RCC_CR'
+  RCC_CR |=(1<<0);
+  ^~~~~~
+../Src/main.c:21:40: error: unknown type name 'uint32_t'
+ #define RCC_CFGR            *(volatile uint32_t *)(RCC_BASE+0x04)
+                                        ^
+../Src/main.c:45:2: note: in expansion of macro 'RCC_CFGR'
+  RCC_CFGR |=(0<<0 | 0<<1);
+  ^~~~~~~~
+../Src/main.c:21:40: error: unknown type name 'uint32_t'
+ #define RCC_CFGR            *(volatile uint32_t *)(RCC_BASE+0x04)
+                                        ^
+../Src/main.c:46:2: note: in expansion of macro 'RCC_CFGR'
+  RCC_CFGR |=(0b101 <<11);
+  ^~~~~~~~
+../Src/main.c:47:2: error: 'RCC' undeclared (first use in this function)
+  RCC|=(0b100 <<8);
+  ^~~
+../Src/main.c:47:2: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:18:40: error: unknown type name 'uint32_t'
+ #define PA_CRH              *(volatile uint32_t *)(PORTA_BASE+0x04)
+                                        ^
+../Src/main.c:53:2: note: in expansion of macro 'PA_CRH'
+  PA_CRH &=0xff0fffff;
+  ^~~~~~
+../Src/main.c:18:40: error: unknown type name 'uint32_t'
+ #define PA_CRH              *(volatile uint32_t *)(PORTA_BASE+0x04)
+                                        ^
+../Src/main.c:54:2: note: in expansion of macro 'PA_CRH'
+  PA_CRH |=0x00200000;
+  ^~~~~~
+../Src/main.c:62:7: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+       for (int i=0;i<5000;i++);
+       ^~~
+../Src/main.c:64:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+   R_ODR->pin.p_13=0;
+   ^~~~~
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:44:38 **** Incremental Build of configuration Debug for project clk_lab ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c:15:10: fatal error: _stdint.h: No such file or directory
+ #include "_stdint.h"
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:44:55 **** Incremental Build of configuration Debug for project clk_lab ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:49:2: error: 'RCC' undeclared (first use in this function)
+  RCC|=(0b100 <<8);
+  ^~~
+../Src/main.c:49:2: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:64:7: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+       for (int i=0;i<5000;i++);
+       ^~~
+../Src/main.c:66:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+   R_ODR->pin.p_13=0;
+   ^~~~~
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:45:33 **** Incremental Build of configuration Debug for project clk_lab ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:62:7: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+       for (int i=0;i<5000;i++);
+       ^~~
+../Src/main.c:64:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+   R_ODR->pin.p_13=0;
+   ^~~~~
+arm-none-eabi-gcc -o "clk_lab.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\embedded diploma\unit6\work_space\Clock\clk_lab\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="clk_lab.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: clk_lab.elf
+ 
+arm-none-eabi-size   clk_lab.elf 
+arm-none-eabi-objdump -h -S  clk_lab.elf  > "clk_lab.list"
+arm-none-eabi-objcopy  -O binary  clk_lab.elf  "clk_lab.bin"
+   text	   data	    bss	    dec	    hex	filename
+    724	     12	   1564	   2300	    8fc	clk_lab.elf
+Finished building: default.size.stdout
+ 
+Finished building: clk_lab.bin
+ 
+Finished building: clk_lab.list
+ 
+15:54:48 **** Build of configuration Debug for project CLK_lab1 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+../Src/main.c: In function 'main':
+../Src/main.c:51:7: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+       for (int i=0;i<5000;i++);
+       ^~~
+../Src/main.c:53:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+   R_ODR->pin.p_13=0;
+   ^~~~~
+arm-none-eabi-gcc -o "CLK_lab1.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\embedded diploma\unit6\work_space\Clock\CLK_lab1\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CLK_lab1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: CLK_lab1.elf
+ 
+arm-none-eabi-size   CLK_lab1.elf 
+arm-none-eabi-objdump -h -S  CLK_lab1.elf  > "CLK_lab1.list"
+arm-none-eabi-objcopy  -O binary  CLK_lab1.elf  "CLK_lab1.bin"
+   text	   data	    bss	    dec	    hex	filename
+    672	     12	   1564	   2248	    8c8	CLK_lab1.elf
+Finished building: default.size.stdout
+ 
+Finished building: CLK_lab1.bin
+Finished building: CLK_lab1.list
+ 
+ 
+16:51:59 **** Incremental Build of configuration Debug for project CLK_lab1 ****
+make -j8 all 
+arm-none-eabi-size   CLK_lab1.elf 
+   text	   data	    bss	    dec	    hex	filename
+    672	     12	   1564	   2248	    8c8	CLK_lab1.elf
+Finished building: default.size.stdout
+ 
+16:51:59 **** Build of configuration Debug for project Clk_lab3 ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+../Src/main.c: In function 'main':
+../Src/main.c:68:7: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+       for (int i=0;i<5000;i++);
+       ^~~
+../Src/main.c:70:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+   R_ODR->pin.p_13=0;
+   ^~~~~
+arm-none-eabi-gcc -o "Clk_lab3.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\embedded diploma\unit6\work_space\Clock\Clk_lab3\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Clk_lab3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Clk_lab3.elf
+ 
+arm-none-eabi-size   Clk_lab3.elf 
+arm-none-eabi-objdump -h -S  Clk_lab3.elf  > "Clk_lab3.list"
+arm-none-eabi-objcopy  -O binary  Clk_lab3.elf  "Clk_lab3.bin"
+   text	   data	    bss	    dec	    hex	filename
+    748	     12	   1564	   2324	    914	Clk_lab3.elf
+Finished building: default.size.stdout
+ 
+Finished building: Clk_lab3.bin
+Finished building: Clk_lab3.list
+ 
+ 
+16:51:59 **** Incremental Build of configuration Debug for project clk_lab ****
+make -j8 all 
+arm-none-eabi-size   clk_lab.elf 
+   text	   data	    bss	    dec	    hex	filename
+    724	     12	   1564	   2300	    8fc	clk_lab.elf
+Finished building: default.size.stdout
+ 

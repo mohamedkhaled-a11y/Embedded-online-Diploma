@@ -1,0 +1,62 @@
+/**
+this lab is to enable clock features in stm32f103c6
+
+ *
+ ******************************************************************************
+ */
+
+#if !defined(__SOFT_FP__) && defined(__ARM_FP)
+  #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+#endif
+
+
+#include "stdint.h"
+
+#define RCC_BASE             0x40021000
+#define PORTA_BASE           0X40010800
+#define RCC_APB2ENR         *(volatile uint32_t *)(RCC_BASE+0x18)
+#define PA_CRH              *(volatile uint32_t *)(PORTA_BASE+0x04)
+#define PA_ODR              *((volatile uint32_t *)(PORTA_BASE+0x0C)
+
+#define  RCC_IOPAEN  (1<<2)
+#define  GPIO13  (1UL<<13)
+
+
+typedef union {
+	       volatile uint32_t   all_fileds;
+	       struct{
+	    	   volatile uint32_t   reserved:13;
+	    	   volatile uint32_t  p_13:1;
+	       }pin;
+
+}R_ODR_t;
+
+volatile R_ODR_t* R_ODR=  (volatile R_ODR_t*)(PORTA_BASE+0x0c);
+
+
+
+int main(void)
+{
+	RCC_APB2ENR |=RCC_IOPAEN;
+
+	PA_CRH &=0xff0fffff;
+	PA_CRH |=0x00200000;
+
+
+	while (1)
+	{
+
+   	   R_ODR->pin.p_13=1;
+
+     	for (int i=0;i<5000;i++);
+
+		R_ODR->pin.p_13=0;
+
+		for (int i=0;i<5000;i++);
+
+	}
+
+
+	return 0;
+
+}
