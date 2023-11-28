@@ -51,9 +51,16 @@ void INT_Init()
 	MCUCR &= ~(1<<1);
 	
 	//Making INT1 trigger on Rising edge
-	
+
+/*	
 	MCUCR |= (1<<2);
 	MCUCR |= (1<<3);
+	
+*/
+   
+   MCUCR |= (1<<ISC11);
+
+
 	//Making INT2 trigger on falling edge
 	MCUCSR &= ~(1<<6);
 	
